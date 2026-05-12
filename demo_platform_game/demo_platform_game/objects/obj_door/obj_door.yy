@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ladder_1",
+  "name": "obj_door",
   "spriteId": {
-    "name": "spr_ladder_1",
-    "path": "sprites/spr_ladder_1/spr_ladder_1.yy",
+    "name": "spr_door",
+    "path": "sprites/spr_door/spr_door.yy",
   },
   "solid": false,
   "visible": true,

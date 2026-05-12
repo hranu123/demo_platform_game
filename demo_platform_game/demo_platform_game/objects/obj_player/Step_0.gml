@@ -18,14 +18,29 @@ if (is_climbing) {
 }
 else {
 // Gravity & Jumping
-
-
-
+	if (is_grounded && jump_pressed) {
+	move_y=jump_speed
+	}
 // Falling
-
-
-
+	else if (move_y < max_fall_speed) { // make sure it doesn't fall too fast
+		move_y+= gravity_force;		// if falling, move at gravity acceleration	}
+	}
 }
 // MOVE THE PLAYER
+move_and_collide(move_x, move_y, ground_object); // the one line that actually moves the object
 
 // OUTSIDE THE ROOM
+if (x < -20 || x> room_width + 20 || y> room_height + 20 || y < -200) {
+	room_restart(); // restart the room if object goes out of the boundaries
+}
+// GET KEY
+if place_meeting(x, y, obj_key) {
+	got_key=true
+	instance_destroy(obj_key)
+}
+// DOOR 
+if place_meeting(x, y, obj_door) {
+	if (got_key) {
+		room_goto_next();
+	}
+}

@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ground_1",
+  "name": "obj_key",
   "spriteId": {
-    "name": "spr_ground_2",
-    "path": "sprites/spr_ground_2/spr_ground_2.yy",
+    "name": "spr_key",
+    "path": "sprites/spr_key/spr_key.yy",
   },
   "solid": false,
   "visible": true,
